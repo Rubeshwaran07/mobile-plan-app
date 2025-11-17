@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+.sidebar {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #4a90e2, #00c9a7);
+  height: calc(100vh - 60px); /* ✅ below navbar */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 60px; /* ✅ start below navbar */
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1500;
+  width: 230px;
+}
+
+/* Collapsed state */
+.sidebar.collapsed {
+  align-items: center;
+}
+
+/* Toggle button */
+.toggle-btn {
+  font-size: 1.4rem;
+  text-align: right;
+  padding: 20px 20px 10px 0;
+  cursor: pointer;
+  color: #e0f7f5;
+  transition: color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  color: #ffffff;
+}
+
+/* Menu list */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin: 0 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.sidebar ul li svg {
+  min-width: 22px;
+  stroke-width: 2.2;
+}
+
+/* Hover effect */
+.sidebar ul li:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(4px);
+  color: #ffffff;
+}
+
+.sidebar ul li.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Collapsed view */
+.sidebar.collapsed ul li {
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.sidebar.collapsed ul li span {
+  display: none;
+}
+
+/* Smooth icon hover */
+.sidebar ul li svg {
+  transition: transform 0.3s ease;
+}
+
+.sidebar ul li:hover svg {
+  transform: scale(1.2);
+}
+
+/* Responsive (Mobile bottom bar) */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    flex-direction: row;
+    height: 70px;
+    width: 100%;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.15);
+    justify-content: space-around;
+  }
+
+  .sidebar ul {
+    flex-direction: row;
+    margin: 0;
+    gap: 0;
+  }
+
+  .sidebar ul li {
+    flex: 1;
+    justify-content: center;
+    margin: 0;
+    border-radius: 0;
+    font-size: 0.9rem;
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+}

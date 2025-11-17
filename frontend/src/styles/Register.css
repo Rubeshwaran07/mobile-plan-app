@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.register-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animated background gradient */
+.register-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #4a90e2, #00c9a7);
+  background-size: 200% 200%;
+  animation: gradientMove 6s ease infinite;
+  z-index: 0;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Card Container */
+.register-card {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  padding: 40px 35px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* App name */
+.app-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #4a90e2;
+  margin-bottom: 10px;
+}
+
+/* Titles */
+.register-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 5px;
+}
+
+.register-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.register-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.register-input:focus {
+  border-color: #00c9a7;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 201, 167, 0.3);
+}
+
+/* Button */
+.register-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #00c9a7, #4a90e2);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  opacity: 0.9;
+}
+
+/* Links */
+.register-links {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.register-links a {
+  text-decoration: none;
+  color: #4a90e2;
+  transition: color 0.3s ease;
+}
+
+.register-links a:hover {
+  color: #00c9a7;
+}
+
+/* Alerts */
+.custom-alert {
+  font-size: 0.9rem;
+  border-radius: 8px;
+}

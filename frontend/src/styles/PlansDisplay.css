@@ -1,0 +1,109 @@
+.plans-container {
+  padding: 30px;
+  color: #222;
+  font-family: "Poppins", sans-serif;
+}
+
+.plans-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.plans-header h2 {
+  font-size: 24px;
+  color: #222;
+  font-weight: 600;
+}
+
+.search-input {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 250px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.plan-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+
+.plan-card h3 {
+  color: #007bff;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.plan-type {
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.plan-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.plan-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.price {
+  color: #28a745;
+  font-size: 16px;
+}
+
+.validity {
+  color: #ff5722;
+  font-size: 14px;
+}
+
+.addons-list {
+  margin-top: 10px;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #333;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-top: 50px;
+}
+
+.no-plans {
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+  margin-top: 30px;
+}
